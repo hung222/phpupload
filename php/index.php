@@ -8,10 +8,10 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if(isset($_POST["submit"])) {
   $check = imagestring($_FILES["fileToUpload"]["tmp_name"]);
   if($check !== false) {
-    echo "File is an image - " . $check["mime"] . ".";
+    echo "File is an image - " . $check["mime"] . ".jpeg,jpg,gif";
     $uploadOk = 1;
   } else {
-    echo "File is not an image.";
+    echo "upload file có đuôi jpeg,jpg,gif";
     $uploadOk = 0;
   }
 }
